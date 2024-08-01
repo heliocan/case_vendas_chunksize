@@ -53,7 +53,7 @@ memory usage: 2.4 GB
 
 </details>
 
-==================================================
+================================================
 
 ### Executando com otimização [vendas_estudo_caso_otimized.py](vendas_estudo_caso_otimized.py)
 
@@ -155,7 +155,7 @@ Process finished with exit code 0
 
 </details>
 
-==================================================
+================================================
 
 ## Teórico
 
