@@ -1,28 +1,30 @@
 # Estudo de caso vendas.csv
 
-## Prático
+Projeto para otimização de leitura e análise de grandes arquivos CSV utilizando Pandas. Implementação de carga eficiente com chunksize, reduzindo o uso de memória e melhorando a performance. Resultados finais foram comparados entre métodos otimizados e não otimizados.
 
 Temos os dois cenários (sem otimização e otimizado) para comparação de ganhos.
 
-<div style="background-color: #f0f0f0; padding: 10px; border-left: 5px solid #007bff;">
+## Como utilizar
+
+
 🚨 Atenção: Necessário disponibilizar o arquivo <b>vendas.csv</b> no diretório raiz.
-</div>
-
-Arquivo [disponível aqui](https://www.notion.so/Testes-Engenheiro-de-Dados-30dc29e69ba74e04973ab0cd903e2920?pvs=4) para download.
 
 
-### Executando sem otimização
+- Arquivo [disponível aqui](https://www.notion.so/Testes-Engenheiro-de-Dados-30dc29e69ba74e04973ab0cd903e2920?pvs=4) para download;
 
-Modo bruto, não recomendado. Criado somente para comparativo.
+- Você pode utilizar o notebook arquivo [vendas_estudo_caso.ipynb](vendas_estudo_caso.ipynb)
+- Ou pode executar diretamente os arquivos abaixo 
+  - Sem otimização [vendas_estudo_caso_horse.py](vendas_estudo_caso_horse.py)
+  - Com otimização [vendas_estudo_caso_otimized.py](vendas_estudo_caso_otimized.py)
 
-*Uso de armazenamento que seria despejado na memória: memory usage: 2.4 Gb.*
+## Resultados esperados
 
-Arquivo **vendas_estudo_caso_horse.py** pode ser executado diretamente. 
+### Executando sem otimização [vendas_estudo_caso_horse.py](vendas_estudo_caso_horse.py)
 
-Esperado o resulado em JSON, similar a:
+=========================================Resultado sem tratamento=============================================
 
 <details>
-  <summary>Clique para expandir</summary>
+  <summary>CLIQUE PARA EXPANDIR</summary>
 
 ```json
 Início = CPU: 0.0% | Memória RAM: 86.37 MB
@@ -51,16 +53,14 @@ memory usage: 2.4 GB
 
 </details>
 
-### Executando com otimização
+==========================================================================================================
 
-Arquivo **vendas_estudo_caso.py** pode ser executado diretamente. 
+### Executando com otimização [vendas_estudo_caso_otimized.py](vendas_estudo_caso_otimized.py)
 
-*Uso de armazenamento que seria despejado na memória: memory usage: 29.6 Mb.*
-
-Esperado o resulado em JSON, similar a
+=========================================Resultado com tratamento=============================================
 
 <details>
-  <summary>Clique para expandir</summary>
+  <summary>CLIQUE PARA EXPANDIR</summary>
 
 ```json
 Início = CPU: 0.0% | Memória RAM: 87.20 MB
@@ -155,7 +155,7 @@ Process finished with exit code 0
 
 </details>
 
-
+==========================================================================================================
 
 ## Teórico
 
@@ -163,31 +163,15 @@ Process finished with exit code 0
 **Posição:** Eng. De Dados  
 **Requisitos registrados em:** [Notion](https://www.notion.so/Testes-Engenheiro-de-Dados-30dc29e69ba74e04973ab0cd903e2920?pvs=4)  
 
-
-Caros,  
-Obrigado pela oportunidade! Foi muito legal brincar com esse desafio. É claro que existem N formas de fazer, e eu segui a prática e dicas do briefing!
+É claro que existem N formas de fazer, e eu segui a prática e dicas do briefing!
 
 ### Observações sobre o pedido:
 1. O arquivo possui 4.999.999 linhas, com cabeçalho totaliza 5 milhões de linhas, com tamanho total de ~609Mb;
 2. Na ausência da dimensão “produto” ou “product”, foi utilizado o “item type”;
-3. Na vida real, seria ótimo um momento de explorar melhorar as perguntas, para chegar mais perto do desejado. Então segui minha interpretação 😊.
-
-### Fases em resumo
-1. Exploração do arquivo (técnico e conceitual);
-2. Elaboração do código python não otimizado para comparar com otimizado;
-3. Início da elaboração do código otimizado conforme requisitos técnicos;
-4. Testes de cenários com chunksize e streaming;
-5. Escolha da abordagem (chunksize escolhido pela performance);
-6. Ajustes para melhores cenários;
-7. Conclusão
 
 ### Abordagem
 Fazer a carga por streaming não me pareceu objetivo nem produtivo, foi ótimo para testar.  
 Então preferi utilizar a carga por “pacotes de linhas” com chunksize. 
-
-### Desafio
- 
-O desafio está em manter o uso da memória baixa, portanto odos os cálculos foram aproveitados em chunk, para ocupar o mínimo de memória alocada.
 
 ### Estratégia
 1. Criação de dicionário prévio de 1000 linhas para identificação dos tipos;
