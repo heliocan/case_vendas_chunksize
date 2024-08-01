@@ -21,7 +21,7 @@ Temos os dois cenários (sem otimização e otimizado) para comparação de ganh
 
 ### Executando sem otimização [vendas_estudo_caso_horse.py](vendas_estudo_caso_horse.py)
 
-=========================================Resultado sem tratamento=============================================
+===============Resultado sem tratamento===============
 
 <details>
   <summary>CLIQUE PARA EXPANDIR</summary>
@@ -53,11 +53,11 @@ memory usage: 2.4 GB
 
 </details>
 
-==========================================================================================================
+==================================================
 
 ### Executando com otimização [vendas_estudo_caso_otimized.py](vendas_estudo_caso_otimized.py)
 
-=========================================Resultado com tratamento=============================================
+===============Resultado com tratamento===============
 
 <details>
   <summary>CLIQUE PARA EXPANDIR</summary>
@@ -155,7 +155,7 @@ Process finished with exit code 0
 
 </details>
 
-==========================================================================================================
+==================================================
 
 ## Teórico
 
