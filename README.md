@@ -4,9 +4,12 @@
 
 Temos os dois cenários (sem otimização e otimizado) para comparação de ganhos.
 
-🚨 **Atenção:** Necessário disponibilizar o arquivo **vendas.csv** no diretório raiz.
+<div style="background-color: #f0f0f0; padding: 10px; border-left: 5px solid #007bff;">
+🚨 Atenção: Necessário disponibilizar o arquivo <b>vendas.csv</b> no diretório raiz.
+</div>
 
-Arquivo [disponível aqui](https://www.notion.so/Testes-Engenheiro-de-Dados-30dc29e69ba74e04973ab0cd903e2920?pvs=4) para download
+Arquivo [disponível aqui](https://www.notion.so/Testes-Engenheiro-de-Dados-30dc29e69ba74e04973ab0cd903e2920?pvs=4) para download.
+
 
 ### Executando sem otimização
 
